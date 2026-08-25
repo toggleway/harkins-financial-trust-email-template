@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light only">
+  <meta name="supported-color-schemes" content="light only">
+  <title>{{EMAIL_SUBJECT}}</title>
+  <style>
+    html, body { margin: 0 !important; padding: 0 !important; width: 100% !important; background: #e9edf3; }
+    table { border-collapse: collapse; border-spacing: 0; }
+    img { border: 0; display: block; }
+    a { color: inherit; }
+    .shell { width: 100%; background: #e9edf3; }
+    .card { width: 680px; max-width: 680px; }
+    .mobile-pad { padding-left: 44px; padding-right: 44px; }
+    .snapshot { width: 100%; }
+      .snapshot th { white-space: nowrap; }
+      .chart-mobile { display: none; mso-hide: all; }
+    @media only screen and (max-width: 700px) {
+      .card { width: 100% !important; max-width: 100% !important; }
+      .mobile-pad { padding-left: 22px !important; padding-right: 22px !important; }
+      .hero-title { font-size: 35px !important; line-height: 39px !important; }
+      .hero-copy { font-size: 16px !important; line-height: 25px !important; }
+      .brand-logo { width: 220px !important; }
+      .stat-cell { display: block !important; width: 100% !important; box-sizing: border-box !important; }
+      .stat-divider { border-left: 0 !important; border-top: 1px solid #d5dbe3 !important; }
+      .desktop-table { display: none !important; }
+      .mobile-holding { display: table !important; width: 100% !important; }
+      .watch-number { width: 42px !important; }
+      .section-title { font-size: 25px !important; line-height: 30px !important; }
+      .chart-desktop { display: none !important; mso-hide: all !important; }
+      .chart-mobile { display: block !important; width: 100% !important; max-width: 100% !important; }
+    }
+  </style>
+</head>
+<body style="margin:0; padding:0; background:#e9edf3; color:#182331; font-family:Arial, Helvetica, sans-serif; -webkit-font-smoothing:antialiased;">
+  <div style="display:none; max-height:0; overflow:hidden; opacity:0; color:transparent;">{{PREHEADER}}</div>
+  <table role="presentation" width="100%" class="shell" style="width:100%; background:#e9edf3;">
+    <tr>
+      <td align="center" style="padding:28px 12px 42px;">
+        <table role="presentation" width="680" class="card" style="width:680px; max-width:680px; background:#ffffff; border-radius:20px; overflow:hidden; box-shadow:0 12px 35px rgba(24,35,49,0.12);">
+          <tr>
+            <td class="mobile-pad" style="padding:15px 44px; background:#f7f5f0; border-bottom:1px solid #e3ded4;">
+              <table role="presentation" width="100%">
+                <tr>
+                  <td><img class="brand-logo" src="https://toggleway.github.io/harkins-financial-trust-email-template/harkins-financial-trust-logo.png" width="270" alt="Harkins Financial Trust" style="display:block; width:270px; max-width:100%; height:auto;"></td>
+                  <td align="right" style="font-size:11px; line-height:16px; color:#647386; white-space:nowrap;">{{REPORT_DATE_SHORT}}</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="mobile-pad" style="padding:52px 44px 48px; background:#0b1f33;">
+              <div style="font-size:12px; line-height:16px; color:#e9b56e; letter-spacing:2.6px; font-weight:bold; text-transform:uppercase; margin-bottom:18px;">Weekly Investment Tracker</div>
+              <h1 class="hero-title" style="margin:0 0 18px; font-family:Georgia, 'Times New Roman', serif; font-size:46px; line-height:50px; font-weight:normal; letter-spacing:-1.1px; color:#ffffff;">{{HERO_HEADLINE_HTML}}</h1>
+              <p class="hero-copy" style="margin:0; max-width:530px; font-size:17px; line-height:27px; color:#c7d2de;">{{HERO_SUMMARY}}</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="padding:0; background:#f7f5f0; border-bottom:1px solid #e5e1d9;">
+              <table role="presentation" width="100%">
+                <tr>
+                  <td class="stat-cell mobile-pad" width="50%" style="width:50%; padding:29px 24px 28px 44px; vertical-align:top;">
+                    <div style="font-size:11px; line-height:15px; color:#647386; letter-spacing:1.5px; font-weight:bold; text-transform:uppercase;">Model value now</div>
+                    <div style="font-family:Georgia, 'Times New Roman', serif; font-size:31px; line-height:38px; color:#132a42; margin-top:5px;">{{TOTAL_VALUE}}</div>
+                  </td>
+                  <td class="stat-cell stat-divider" width="50%" style="width:50%; padding:29px 44px 28px 24px; vertical-align:top; border-left:1px solid #d5dbe3;">
+                    <div style="font-size:11px; line-height:15px; color:#647386; letter-spacing:1.5px; font-weight:bold; text-transform:uppercase;">Weekly gain / loss</div>
+                    <div style="font-family:Georgia, 'Times New Roman', serif; font-size:31px; line-height:38px; color:{{WEEKLY_COLOR}}; margin-top:5px;">{{WEEKLY_CHANGE_AMOUNT}}</div>
+                    <div style="font-size:13px; line-height:18px; color:{{WEEKLY_COLOR}}; font-weight:bold;">{{WEEKLY_CHANGE_PERCENT}}</div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="mobile-pad" style="padding:40px 44px 42px;">
+              <table role="presentation" width="100%" style="margin-bottom:25px;">
+                <tr>
+                  <td>
+                    <div style="font-size:11px; line-height:15px; color:#b27634; letter-spacing:1.8px; font-weight:bold; text-transform:uppercase;">{{COMPARISON_PERIOD}}</div>
+                    <h2 class="section-title" style="margin:7px 0 0; font-family:Georgia, 'Times New Roman', serif; font-size:29px; line-height:34px; font-weight:normal; color:#132a42;">Portfolio snapshot</h2>
+                  </td>
+                </tr>
+              </table>
+
+              <table role="presentation" width="100%" style="margin:0 0 16px; background:#f7f5f0; border-radius:9px;">
+                <tr>
+                  <td style="padding:14px 16px; font-size:12px; line-height:19px; color:#526272;"><strong style="color:#132a42;">Starting allocation:</strong> {{STARTING_ALLOCATION_SUMMARY}}</td>
+                </tr>
+              </table>
+
+              <p style="margin:0 0 17px; font-size:12px; line-height:19px; color:#647386;">{{VALUATION_NOTE}}</p>
+
+              <table role="presentation" width="100%" class="desktop-table snapshot" style="width:100%; border:1px solid #dce2e8; border-radius:10px; overflow:hidden;">
+                <tr style="background:#132a42;">
+                  <th align="left" style="padding:13px 12px; font-size:10px; line-height:13px; color:#ffffff; letter-spacing:.7px; text-transform:uppercase;">Holding</th>
+                  <th align="right" style="padding:13px 8px; font-size:10px; line-height:13px; color:#bfcbd7; letter-spacing:.3px; text-transform:uppercase;">{{PREVIOUS_PRICE_DATE_SHORT}}</th>
+                  <th align="right" style="padding:13px 8px; font-size:10px; line-height:13px; color:#bfcbd7; letter-spacing:.3px; text-transform:uppercase;">{{CURRENT_PRICE_DATE_SHORT}}</th>
+                  <th align="right" style="padding:13px 8px; font-size:10px; line-height:13px; color:#bfcbd7; letter-spacing:.3px; text-transform:uppercase;">Move</th>
+                  <th align="right" style="padding:13px 8px; font-size:10px; line-height:13px; color:#bfcbd7; letter-spacing:.3px; text-transform:uppercase;">Value now</th>
+                  <th align="right" style="padding:13px 12px 13px 8px; font-size:10px; line-height:13px; color:#bfcbd7; letter-spacing:.3px; text-transform:uppercase;">G / L</th>
+                </tr>
+                <tr>
+                  <td style="padding:15px 12px; border-bottom:1px solid #e1e6eb; font-size:14px; line-height:19px; font-weight:bold; color:#132a42;">{{HOLDING_1_NAME}}</td>
+                  <td align="right" style="padding:15px 8px; border-bottom:1px solid #e1e6eb; font-size:13px; color:#526272;">{{HOLDING_1_PREVIOUS_PRICE}}</td>
+                  <td align="right" style="padding:15px 8px; border-bottom:1px solid #e1e6eb; font-size:13px; color:#526272;">{{HOLDING_1_CURRENT_PRICE}}</td>
+                  <td align="right" style="padding:15px 8px; border-bottom:1px solid #e1e6eb; font-size:13px; font-weight:bold; color:{{HOLDING_1_COLOR}};">{{HOLDING_1_CHANGE_PERCENT}}</td>
+                  <td align="right" style="padding:15px 8px; border-bottom:1px solid #e1e6eb; font-size:12px; font-weight:bold; color:#132a42;">{{HOLDING_1_VALUE}}</td>
+                  <td align="right" style="padding:15px 12px 15px 8px; border-bottom:1px solid #e1e6eb; font-size:12px; font-weight:bold; color:{{HOLDING_1_COLOR}};">{{HOLDING_1_GAIN_LOSS}}</td>
+                </tr>
+                <tr style="background:#fbfcfd;">
+                  <td style="padding:15px 12px; border-bottom:1px solid #e1e6eb; font-size:14px; line-height:19px; font-weight:bold; color:#132a42;">{{HOLDING_2_NAME}}</td>
+                  <td align="right" style="padding:15px 8px; border-bottom:1px solid #e1e6eb; font-size:13px; color:#526272;">{{HOLDING_2_PREVIOUS_PRICE}}</td>
+                  <td align="right" style="padding:15px 8px; border-bottom:1px solid #e1e6eb; font-size:13px; color:#526272;">{{HOLDING_2_CURRENT_PRICE}}</td>
+                  <td align="right" style="padding:15px 8px; border-bottom:1px solid #e1e6eb; font-size:13px; font-weight:bold; color:{{HOLDING_2_COLOR}};">{{HOLDING_2_CHANGE_PERCENT}}</td>
+                  <td align="right" style="padding:15px 8px; border-bottom:1px solid #e1e6eb; font-size:12px; font-weight:bold; color:#132a42;">{{HOLDING_2_VALUE}}</td>
+                  <td align="right" style="padding:15px 12px 15px 8px; border-bottom:1px solid #e1e6eb; font-size:12px; font-weight:bold; color:{{HOLDING_2_COLOR}};">{{HOLDING_2_GAIN_LOSS}}</td>
+                </tr>
+                <tr>
+                  <td style="padding:15px 12px; font-size:14px; line-height:19px; font-weight:bold; color:#132a42;">{{HOLDING_3_NAME}}</td>
+                  <td align="right" style="padding:15px 8px; font-size:13px; color:#526272;">{{HOLDING_3_PREVIOUS_PRICE}}</td>
+                  <td align="right" style="padding:15px 8px; font-size:13px; color:#526272;">{{HOLDING_3_CURRENT_PRICE}}</td>
+                  <td align="right" style="padding:15px 8px; font-size:13px; font-weight:bold; color:{{HOLDING_3_COLOR}};">{{HOLDING_3_CHANGE_PERCENT}}</td>
+                  <td align="right" style="padding:15px 8px; font-size:12px; font-weight:bold; color:#132a42;">{{HOLDING_3_VALUE}}</td>
+                  <td align="right" style="padding:15px 12px 15px 8px; font-size:12px; font-weight:bold; color:{{HOLDING_3_COLOR}};">{{HOLDING_3_GAIN_LOSS}}</td>
+                </tr>
+              </table>
+
+              <table role="presentation" width="100%" class="mobile-holding" style="display:none; mso-hide:all;">
+                <tr><td style="padding:16px; border:1px solid #dce2e8; border-radius:9px;"><table role="presentation" width="100%"><tr><td style="font-size:15px; font-weight:bold; color:#132a42;">{{HOLDING_1_NAME}}</td><td align="right" style="font-size:14px; font-weight:bold; color:{{HOLDING_1_COLOR}};">{{HOLDING_1_CHANGE_PERCENT}}</td></tr><tr><td style="padding-top:8px; font-size:12px; color:#647386;">{{HOLDING_1_PREVIOUS_PRICE}} → {{HOLDING_1_CURRENT_PRICE}}</td><td align="right" style="padding-top:8px; font-size:13px; font-weight:bold; color:#132a42;">{{HOLDING_1_VALUE}}</td></tr><tr><td colspan="2" align="right" style="padding-top:3px; font-size:12px; color:{{HOLDING_1_COLOR}};">{{HOLDING_1_GAIN_LOSS}}</td></tr></table></td></tr>
+                <tr><td style="height:10px;"></td></tr>
+                <tr><td style="padding:16px; border:1px solid #dce2e8; border-radius:9px;"><table role="presentation" width="100%"><tr><td style="font-size:15px; font-weight:bold; color:#132a42;">{{HOLDING_2_NAME}}</td><td align="right" style="font-size:14px; font-weight:bold; color:{{HOLDING_2_COLOR}};">{{HOLDING_2_CHANGE_PERCENT}}</td></tr><tr><td style="padding-top:8px; font-size:12px; color:#647386;">{{HOLDING_2_PREVIOUS_PRICE}} → {{HOLDING_2_CURRENT_PRICE}}</td><td align="right" style="padding-top:8px; font-size:13px; font-weight:bold; color:#132a42;">{{HOLDING_2_VALUE}}</td></tr><tr><td colspan="2" align="right" style="padding-top:3px; font-size:12px; color:{{HOLDING_2_COLOR}};">{{HOLDING_2_GAIN_LOSS}}</td></tr></table></td></tr>
+                <tr><td style="height:10px;"></td></tr>
+                <tr><td style="padding:16px; border:1px solid #dce2e8; border-radius:9px;"><table role="presentation" width="100%"><tr><td style="font-size:15px; font-weight:bold; color:#132a42;">{{HOLDING_3_NAME}}</td><td align="right" style="font-size:14px; font-weight:bold; color:{{HOLDING_3_COLOR}};">{{HOLDING_3_CHANGE_PERCENT}}</td></tr><tr><td style="padding-top:8px; font-size:12px; color:#647386;">{{HOLDING_3_PREVIOUS_PRICE}} → {{HOLDING_3_CURRENT_PRICE}}</td><td align="right" style="padding-top:8px; font-size:13px; font-weight:bold; color:#132a42;">{{HOLDING_3_VALUE}}</td></tr><tr><td colspan="2" align="right" style="padding-top:3px; font-size:12px; color:{{HOLDING_3_COLOR}};">{{HOLDING_3_GAIN_LOSS}}</td></tr></table></td></tr>
+              </table>
+
+              <p style="margin:14px 0 0; font-size:11px; line-height:17px; color:#788696;">{{FX_NOTE}}</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="mobile-pad" style="padding:0 44px 42px; background:#ffffff;">
+              <div style="font-size:11px; line-height:15px; color:#b27634; letter-spacing:1.8px; font-weight:bold; text-transform:uppercase;">Long-term direction</div>
+              <h2 class="section-title" style="margin:7px 0 20px; font-family:Georgia, 'Times New Roman', serif; font-size:29px; line-height:34px; font-weight:normal; color:#132a42;">Portfolio history</h2>
+              <table role="presentation" width="100%" style="width:100%; border:1px solid #dce2e8; border-radius:10px; overflow:hidden;">
+                <tr style="background:#132a42;">
+                  <th align="left" style="padding:12px 10px; font-size:10px; color:#ffffff; text-transform:uppercase;">Report date</th>
+                  <th align="right" style="padding:12px 10px; font-size:10px; color:#bfcbd7; text-transform:uppercase;">Total value</th>
+                  <th align="right" style="padding:12px 10px; font-size:10px; color:#bfcbd7; text-transform:uppercase;">Weekly</th>
+                  <th align="right" style="padding:12px 10px; font-size:10px; color:#bfcbd7; text-transform:uppercase;">From start</th>
+                </tr>
+                {{HISTORY_ROWS_HTML}}
+              </table>
+              <table role="presentation" width="100%" style="margin-top:14px; background:#f7f5f0; border-radius:9px;">
+                <tr>
+                  <td style="padding:13px 14px; font-size:11px; line-height:17px; color:#647386;">{{HISTORY_REFERENCE_NOTE}}</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="mobile-pad" style="padding:42px 44px; background:#f4f6f8; border-top:1px solid #e0e5ea; border-bottom:1px solid #e0e5ea;">
+              <div style="font-size:11px; line-height:15px; color:#b27634; letter-spacing:1.8px; font-weight:bold; text-transform:uppercase;">The weekly read</div>
+              <h2 class="section-title" style="margin:7px 0 28px; font-family:Georgia, 'Times New Roman', serif; font-size:29px; line-height:34px; font-weight:normal; color:#132a42;">What happened?</h2>
+
+              <table role="presentation" width="100%">
+                <tr>
+                  <td width="52" valign="top" style="width:52px;"><div style="width:38px; height:38px; border-radius:19px; background:#dce7f0; color:#132a42; font-size:11px; line-height:38px; text-align:center; font-weight:bold;">{{HOLDING_1_BADGE}}</div></td>
+                  <td style="padding:0 0 25px;">
+                    <div style="font-size:16px; line-height:22px; color:#132a42; font-weight:bold;">{{HOLDING_1_NEWS_HEADLINE}}</div>
+                    <p style="margin:6px 0 0; font-size:14px; line-height:23px; color:#526272;">{{HOLDING_1_NEWS_BODY_HTML}}</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="52" valign="top" style="width:52px;"><div style="width:38px; height:38px; border-radius:19px; background:#d9eee7; color:#24745b; font-size:11px; line-height:38px; text-align:center; font-weight:bold;">{{HOLDING_2_BADGE}}</div></td>
+                  <td style="padding:0 0 25px;">
+                    <div style="font-size:16px; line-height:22px; color:#132a42; font-weight:bold;">{{HOLDING_2_NEWS_HEADLINE}}</div>
+                    <p style="margin:6px 0 0; font-size:14px; line-height:23px; color:#526272;">{{HOLDING_2_NEWS_BODY_HTML}}</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="52" valign="top" style="width:52px;"><div style="width:38px; height:38px; border-radius:19px; background:#f1dfdc; color:#a4473b; font-size:10px; line-height:38px; text-align:center; font-weight:bold;">{{HOLDING_3_BADGE}}</div></td>
+                  <td>
+                    <div style="font-size:16px; line-height:22px; color:#132a42; font-weight:bold;">{{HOLDING_3_NEWS_HEADLINE}}</div>
+                    <p style="margin:6px 0 0; font-size:14px; line-height:23px; color:#526272;">{{HOLDING_3_NEWS_BODY_HTML}}</p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="mobile-pad" style="padding:43px 44px; background:#ffffff;">
+              <div style="font-size:11px; line-height:15px; color:#b27634; letter-spacing:1.8px; font-weight:bold; text-transform:uppercase;">Ahead of the market</div>
+              <h2 class="section-title" style="margin:7px 0 27px; font-family:Georgia, 'Times New Roman', serif; font-size:29px; line-height:34px; font-weight:normal; color:#132a42;">Three things to watch</h2>
+              <table role="presentation" width="100%">
+                <tr>
+                  <td class="watch-number" width="54" valign="top" style="width:54px; font-family:Georgia, 'Times New Roman', serif; font-size:30px; line-height:34px; color:#d7a15f;">01</td>
+                  <td style="padding:3px 0 20px; font-size:14px; line-height:22px; color:#526272;">{{WATCH_ITEM_1_HTML}}</td>
+                </tr>
+                <tr>
+                  <td class="watch-number" width="54" valign="top" style="width:54px; font-family:Georgia, 'Times New Roman', serif; font-size:30px; line-height:34px; color:#d7a15f;">02</td>
+                  <td style="padding:3px 0 20px; font-size:14px; line-height:22px; color:#526272;">{{WATCH_ITEM_2_HTML}}</td>
+                </tr>
+                <tr>
+                  <td class="watch-number" width="54" valign="top" style="width:54px; font-family:Georgia, 'Times New Roman', serif; font-size:30px; line-height:34px; color:#d7a15f;">03</td>
+                  <td style="padding:3px 0 0; font-size:14px; line-height:22px; color:#526272;">{{WATCH_ITEM_3_HTML}}</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="mobile-pad" style="padding:34px 44px; background:#f4f6f8; border-top:1px solid #e0e5ea;">
+              <div style="font-size:11px; line-height:15px; color:#b27634; letter-spacing:1.8px; font-weight:bold; text-transform:uppercase;">Sources</div>
+              <p style="margin:9px 0 0; font-size:12px; line-height:20px; color:#526272;">{{SOURCE_LINKS_HTML}}</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="mobile-pad" style="padding:41px 44px; background:#dba862;">
+              <div style="font-size:11px; line-height:15px; color:#5c3a16; letter-spacing:1.8px; font-weight:bold; text-transform:uppercase;">Bottom line</div>
+              <p style="margin:9px 0 0; font-family:Georgia, 'Times New Roman', serif; font-size:25px; line-height:35px; color:#132a42;">{{BOTTOM_LINE_PRIMARY_HTML}}</p>
+              <p style="margin:17px 0 0; font-size:14px; line-height:23px; color:#51391f;">{{BOTTOM_LINE_SECONDARY}}</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="mobile-pad" style="padding:28px 44px 32px; background:#0b1f33;">
+              <table role="presentation" width="100%">
+                <tr>
+                  <td style="font-size:12px; line-height:19px; color:#9eb0c1;">Weekly Investment Tracker<br><span style="color:#d9a965;">Harkins Financial Trust</span></td>
+                  <td align="right" valign="top" style="font-size:11px; line-height:17px; color:#7f93a6;">MODEL PORTFOLIO<br>{{FOOTER_PERIOD}}</td>
+                </tr>
+              </table>
+              <p style="margin:22px 0 0; padding-top:18px; border-top:1px solid #29415a; font-size:10px; line-height:16px; color:#71879a;">This is a tracking model for comparison and education, not personal financial advice.</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
+
